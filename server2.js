@@ -17,6 +17,11 @@ app.use('/detail/:id',(req,res)=>{
     res.render('detail',{detailProduct});
 });
 
+app.use('/',(req,res,next)=>{
+    console.log("Burası middleware katmanı çalıştı.");
+    next(); //? Burası olmasaydı ana sayfa yani next işlem çalışmazdı.
+})
+
 app.use('/',(req,res)=>{
     // res.send("Burası express ile oluşturulan hakkımızda sayfasıdır.");
     res.render('products',{products:products});
