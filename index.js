@@ -48,4 +48,4 @@ const fs =require('fs');
 //!Dosya içine dosya oluşturma
 // fs.mkdirSync("test/test2");
 
-fs.writeFileSync('server.js','console.log("deneme');
+fs.writeFileSync('deneme.js','console.log("deneme")');
